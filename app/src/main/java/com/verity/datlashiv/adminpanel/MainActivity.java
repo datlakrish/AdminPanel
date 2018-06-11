@@ -8,7 +8,8 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
-    Spinner spi, spi2;
+    private Spinner spi, spi2;
+    String result[] = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,15 @@ public class MainActivity extends AppCompatActivity {
         spi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                
+                if (position == 0) {
+                    result = new String[]{"Linux", "Windows", "Mac"};
+                }
+                if (position == 1) {
+                    result = new String[]{"Java", "Php", ".NET"};
+                }
+                if (position == 2) {
+                    result = new String[]{"SQL", "Orcle", "MySql"};
+                }
             }
 
             @Override
