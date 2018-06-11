@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AdminPanel</string>
+
+    <string-array name="cat">
+        <item>OS</item>
+        <item>Languages</item>
+        <item>Data Base</item>
+    </string-array>
+    <string-array name="os">
+        <item>Linux</item>
+        <item>Unix</item>
+        <item>Windows</item>
+    </string-array>
+    <string-array name="lang">
+        <item>C</item>
+        <item>C#</item>
+        <item>Java</item>
+    </string-array>
+    <string-array name="db">
+        <item>Orcle</item>
+        <item>Firebase</item>
+        <item>Sql</item>
+    </string-array>
+</resources>
