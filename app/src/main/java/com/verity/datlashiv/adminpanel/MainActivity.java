@@ -2,12 +2,15 @@ package com.verity.datlashiv.adminpanel;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Toast;
+
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -29,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         s3 = (Spinner) findViewById(R.id.spinner3);
        btn_Submit = (Button)findViewById(R.id.btnsubmit);
 
-        reference = FirebaseDatabase.getInstance().getReference().child("user");
-        modelArrayList = new ArrayList<Model>();
+       reference = FirebaseDatabase.getInstance().getReference().child("userinfo");
+       modelArrayList = new ArrayList<>();
 
         s1.setOnItemSelectedListener(new OnItemSelectedListener() {
 
@@ -161,11 +164,15 @@ public class MainActivity extends AppCompatActivity {
                 String category = s1.getSelectedItem().toString();
                 String subcategory = s2.getSelectedItem().toString();
                 String topic = s3.getSelectedItem().toString();
+                Log.d("Cat",category);
+                Log.d("sub",subcategory);
+                Log.d("topic",topic);
 
 
-                String id = reference.push().getKey();
-                Model model = new Model(id, category,subcategory,topic);
+               String id = reference.push().getKey();
+               Model model = new Model(id, category,subcategory,topic);
                 reference.child(id).setValue(model);
+                Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
             }
         });
 
