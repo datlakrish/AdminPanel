@@ -10,18 +10,30 @@
 
 
     <Spinner
-        android:id="@+id/cat"
+        android:id="@+id/spinner1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/cat"
+        android:layout_height="50dp"
+        android:entries="@array/acc_type"
         android:tooltipText="Select" />
 
     <Spinner
-        android:id="@+id/sub_cat"
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"/>
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"/>
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/cat"/>
-
+        android:text="Submit"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"/>
 
 
 </LinearLayout>

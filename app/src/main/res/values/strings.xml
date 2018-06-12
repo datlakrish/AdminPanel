@@ -1,24 +1,26 @@
 <resources>
     <string name="app_name">AdminPanel</string>
 
-    <string-array name="cat">
+    <string-array name="acc_type">
+        <item>-- Select Category--</item>
         <item>OS</item>
-        <item>Languages</item>
-        <item>Data Base</item>
+        <item>Language</item>
+        <item>Database</item>
     </string-array>
-    <string-array name="os">
-        <item>Linux</item>
-        <item>Unix</item>
-        <item>Windows</item>
-    </string-array>
-    <string-array name="lang">
-        <item>C</item>
-        <item>C#</item>
-        <item>Java</item>
-    </string-array>
-    <string-array name="db">
-        <item>Orcle</item>
-        <item>Firebase</item>
-        <item>Sql</item>
-    </string-array>
+
+    <!--<string-array name="os">-->
+        <!--<item>Linux</item>-->
+        <!--<item>Unix</item>-->
+        <!--<item>Windows</item>-->
+    <!--</string-array>-->
+    <!--<string-array name="lang">-->
+        <!--<item>C</item>-->
+        <!--<item>C#</item>-->
+        <!--<item>Java</item>-->
+    <!--</string-array>-->
+    <!--<string-array name="db">-->
+        <!--<item>Orcle</item>-->
+        <!--<item>Firebase</item>-->
+        <!--<item>Sql</item>-->
+    <!--</string-array>-->
 </resources>
