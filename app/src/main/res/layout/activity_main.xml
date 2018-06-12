@@ -20,20 +20,21 @@
         android:id="@+id/spinner2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp" />
 
     <Spinner
         android:id="@+id/spinner3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp" />
 
     <Button
+        android:id="@+id/btnsubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
         android:layout_marginTop="30dp"
-        android:textAllCaps="false"/>
+        android:text="Submit"
+        android:textAllCaps="false" />
 
 
 </LinearLayout>

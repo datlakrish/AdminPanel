@@ -1,20 +1,24 @@
 package com.verity.datlashiv.adminpanel;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private Spinner s1, s2, s3;
+    private DatabaseReference reference;
+    private Button btn_Submit;
+    ArrayList<Model> modelArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         s1 = (Spinner) findViewById(R.id.spinner1);
         s2 = (Spinner) findViewById(R.id.spinner2);
         s3 = (Spinner) findViewById(R.id.spinner3);
+       btn_Submit = (Button)findViewById(R.id.btnsubmit);
+
+        reference = FirebaseDatabase.getInstance().getReference().child("user");
+        modelArrayList = new ArrayList<Model>();
 
         s1.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -144,6 +152,23 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btn_Submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String category = s1.getSelectedItem().toString();
+                String subcategory = s2.getSelectedItem().toString();
+                String topic = s3.getSelectedItem().toString();
+
+
+                String id = reference.push().getKey();
+                Model model = new Model(id, category,subcategory,topic);
+                reference.child(id).setValue(model);
+            }
+        });
+
+
     }
 
 }
