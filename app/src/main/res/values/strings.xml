@@ -9,18 +9,18 @@
     </string-array>
 
     <!--<string-array name="os">-->
-        <!--<item>Linux</item>-->
-        <!--<item>Unix</item>-->
-        <!--<item>Windows</item>-->
+    <!--<item>Linux</item>-->
+    <!--<item>Unix</item>-->
+    <!--<item>Windows</item>-->
     <!--</string-array>-->
     <!--<string-array name="lang">-->
-        <!--<item>C</item>-->
-        <!--<item>C#</item>-->
-        <!--<item>Java</item>-->
+    <!--<item>C</item>-->
+    <!--<item>C#</item>-->
+    <!--<item>Java</item>-->
     <!--</string-array>-->
     <!--<string-array name="db">-->
-        <!--<item>Orcle</item>-->
-        <!--<item>Firebase</item>-->
-        <!--<item>Sql</item>-->
+    <!--<item>Orcle</item>-->
+    <!--<item>Firebase</item>-->
+    <!--<item>Sql</item>-->
     <!--</string-array>-->
 </resources>

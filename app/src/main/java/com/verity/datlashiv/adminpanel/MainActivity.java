@@ -1,5 +1,6 @@
 package com.verity.datlashiv.adminpanel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -160,20 +161,21 @@ public class MainActivity extends AppCompatActivity {
         btn_Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String category = s1.getSelectedItem().toString();
                 String subcategory = s2.getSelectedItem().toString();
                 String topic = s3.getSelectedItem().toString();
-                Log.d("Cat",category);
-                Log.d("sub",subcategory);
-                Log.d("topic",topic);
+                int position = 0;
 
+                if(category.equals("-- Select Category--")|| subcategory.equals("- -Select Subcategory- -") ||  topic.equals("--Select Topic--")){
+                    Toast.makeText(MainActivity.this, "please select the fields", Toast.LENGTH_SHORT).show();
 
-               String id = reference.push().getKey();
+                }else{
+                    String id = reference.push().getKey();
                Model model = new Model(id, category,subcategory,topic);
                 reference.child(id).setValue(model);
-                Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
-            }
+                Intent i = new Intent(MainActivity.this,PdfActivity.class);
+                startActivity(i);
+            }}
         });
 
 

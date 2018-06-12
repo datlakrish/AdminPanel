@@ -6,11 +6,12 @@ public class Model {
     String sub_cat;
     String topic;
 
-    public Model(String cat, String sub_cat, String topic,String id) {
+    public Model(String id,String cat, String sub_cat, String topic) {
+        this.id = id;
         this.cat = cat;
         this.sub_cat = sub_cat;
         this.topic = topic;
-        this.id = id;
+
     }
 
     public String getId() {
