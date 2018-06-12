@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         modelArrayList = new ArrayList<Model>();
 
         s1.setOnItemSelectedListener(new OnItemSelectedListener() {
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
